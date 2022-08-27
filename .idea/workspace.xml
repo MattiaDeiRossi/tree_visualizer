@@ -15,7 +15,25 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b156a6-e7c4-4ae3-a330-d1e022e3d6ef" name="Changes" comment="" />
+    <list default="true" id="17b156a6-e7c4-4ae3-a330-d1e022e3d6ef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_client/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_client/include/HTTPRequest.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_client/include/json.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_client/include/tree_visualizer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_client/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_server/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_server/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_server/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_server/src/script/jsnetworkx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_visualizer_server/src/script/visualizer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
