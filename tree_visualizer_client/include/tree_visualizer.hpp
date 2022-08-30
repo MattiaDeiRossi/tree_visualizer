@@ -1,33 +1,31 @@
-//
-// Created by matty on 27/08/2022.
-//
+/**
+ * @author Mattia Dei Rossi
+ */
 
-#ifndef TREE_VISUALIZER_CLIENT_TREE_VISUALIZER_HPP
-#define TREE_VISUALIZER_CLIENT_TREE_VISUALIZER_HPP
+#ifndef TREE_VISUALIZER_HPP
+#define TREE_VISUALIZER_HPP
 
 #include "json.hpp"
 #include "HTTPRequest.hpp"
-#include <iostream>
+#include "tree.h"
 
 namespace tree_visualizer
 {
-    void visualize() {
+    void to_json_array(PNode u, nlohmann::json& j){
+        if (u) {
+            j.push_back(u->key);
+            to_json_array(u->left, j);
+            to_json_array(u->right, j);
+        }
+    }
+    void visualize(PNode u) {
         using json = nlohmann::json;
 
         try {
             http::Request request{"http://127.0.0.1:3000/sendGraph"};
             json body;
-            body.push_back(1);
-            body.push_back(2);
-            body.push_back(3);
-            /*body["value"] = 1;
-            body["left"]["value"] = 2;
-            body["left"]["left"] = nullptr;
-            body["left"]["right"] = nullptr;
-            body["right"]["value"] = 3;
-            body["right"]["left"] = nullptr;
-            body["right"]["right"] = nullptr;*/
-
+            to_json_array(u, body);
+            std::cout<<body<<std::endl;
 
             const auto response = request.send("POST", body.dump(), {
                     {"Content-Type", "application/json"}
@@ -39,4 +37,4 @@ namespace tree_visualizer
         }
     }
 }
-#endif //TREE_VISUALIZER_CLIENT_TREE_VISUALIZER_HPP
+#endif //TREE_VISUALIZER_HPP

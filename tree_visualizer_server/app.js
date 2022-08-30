@@ -11,15 +11,12 @@ router.get('/',(req,res) =>{
 });
 
 router.get('/visualizeGraph',(req,res) =>{
-    console.log("get request");
     res.json(graph);
 });
 
 router.post('/sendGraph', (req,res) => {
-    console.log("post request")
-    console.log(req.body);
     graph = req.body;
-    res.status(302 ).send('Found');
+    res.status(302 ).send('Visualizing Graph...');
 });
 
 //add the router
@@ -29,4 +26,4 @@ app.use('/script', express.static(__dirname + '/src/script'));
 app.use('/', router);
 app.listen(process.env.port || 3000);
 
-console.log('Your server available at http://localhost:3000');
+console.log('Your graphs are shown at http://localhost:3000');

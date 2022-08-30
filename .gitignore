@@ -1,2 +1,5 @@
 tree_visualizer_client/cmake-build-debug
 tree_visualizer_server/node_modules
+tree_visualizer_server/package-lock.json
+.idea
+.gitignore
