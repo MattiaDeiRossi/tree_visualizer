@@ -17,14 +17,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b156a6-e7c4-4ae3-a330-d1e022e3d6ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tree_visualizer_client/include/tree.h" afterDir="false" />
+    <list default="true" id="17b156a6-e7c4-4ae3-a330-d1e022e3d6ef" name="Changes" comment="PNode data type added">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tree_visualizer_client/include/tree_visualizer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_client/include/tree_visualizer.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tree_visualizer_client/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_client/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tree_visualizer_server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree_visualizer_server/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_server/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree_visualizer_server/src/script/jsnetworkx.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tree_visualizer_server/src/script/visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_server/src/script/visualizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +84,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="example" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tree_visualizer_client" TARGET_NAME="example" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tree_visualizer_client" RUN_TARGET_NAME="example">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -228,8 +233,17 @@
       <workItem from="1661593178268" duration="687000" />
       <workItem from="1661601283156" duration="2863000" />
       <workItem from="1661866519628" duration="6289000" />
-      <workItem from="1661874617929" duration="56000" />
+      <workItem from="1661874617929" duration="304000" />
+      <workItem from="1661969931916" duration="5095000" />
     </task>
+    <task id="LOCAL-00001" summary="PNode data type added">
+      <created>1661874778893</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661874778893</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,5 +259,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="PNode data type added" />
+    <option name="LAST_COMMIT_MESSAGE" value="PNode data type added" />
   </component>
 </project>

@@ -8,13 +8,5 @@ int main( const int argc, const char** argv )
     root->right = new Node(6);
     root->left->left = new Node(1);
 
-    tree::preorder(root);
-    std::cout<<std::endl;
-    tree::inorder(root);
-    std::cout<<std::endl;
-    tree::postorder(root);
-    std::cout<<std::endl;
-    tree::BFS_iter(root);
-    std::cout<<std::endl;
-    tree_visualizer::visualize(root);
+    tree_serializer::visualizeTree(root);
 }

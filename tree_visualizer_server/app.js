@@ -5,18 +5,24 @@ const app = express();
 const router = express.Router();
 
 var graph;
+var traversals;
 
 router.get('/',(req,res) =>{
     res.sendFile(path.join(__dirname+'/src/index.html'));
 });
 
-router.get('/visualizeGraph',(req,res) =>{
+router.get('/visualizeTree',(req,res) =>{
     res.json(graph);
 });
 
-router.post('/sendGraph', (req,res) => {
+router.post('/sendTree', (req,res) => {
     graph = req.body;
-    res.status(302 ).send('Visualizing Graph...');
+    res.status(302 ).send('Sending Tree...');
+});
+
+router.post('/sendTraversals', (req,res) => {
+    traversals = req.body;
+    res.status(302 ).send('Sending traversals');
 });
 
 //add the router

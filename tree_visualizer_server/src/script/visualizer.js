@@ -1,48 +1,94 @@
-const url = "http://localhost:3000/visualizeGraph"
-var G = new jsnx.Graph();
+/**
+ * @author Mattia Dei Rossi
+ */
+const visualize_tree_url = "http://localhost:3000/visualizeTree"
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+const width = 1200;
+const height = 1200;
+ctx.width = width;
+ctx.height = height;
 
 function getDataGraph(){
-    //clear previus graph
-    G.clear();
+    //clear previo
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     let req = new XMLHttpRequest();
-    req.open("GET", url, true); // true for asynchronous
+    req.open("GET", visualize_tree_url, true); // true for asynchronous
     req.responseType = 'json';
 
-    // TODO: add path between nodes
     req.onload = function() {
         json_graph = JSON.parse(JSON.stringify(req.response));
-        console.log(json_graph)
-        G.addNodesFrom(json_graph);
-
-        //deserialize
-        //from_json_array(json_graph, G, 0);
-        /*for(var key in json_graph){
-            if (json_graph.hasOwnProperty(key)){
-                var value = json_graph[key];
-                G.addNode(value);
-            }
-        }*/
-        draw();
+        //console.log(json_graph)
+        let root = deserializeTree(json_graph);
+        drawTree(root, 300, 100, 100);
     };
 
     req.send("Ok");
 }
 
-function draw() {
-    return jsnx.draw(G, {
-        element: '#canvas',
-        weighted: true,
-        edgeStyle: {
-            'stroke-width': 5
-        },
-        withLabels: true,
-    });
+// level order traversal (
+function deserializeTree(data){
+    const root = new Tree(data.shift());
+    const queue = [root];
+
+    while (data.length > 0) {
+        const node = queue.shift();
+
+        // Left node
+        let val = data.shift();
+        if (typeof val !== 'undefined' && val !== null) {
+            node.left = new Tree(val);
+            queue.push(node.left);
+        }
+
+        // Right node
+        val = data.shift();
+        if (typeof val !== 'undefined' && val !== null) {
+            node.right = new Tree(val);
+            queue.push(node.right);
+        }
+    }
+
+    return root;
 }
 
-function from_json_array(json, G, i){
-    if (json[i]) {
-        from_json_array(json, G, i+1);
-        console.log(json[i]);
-        from_json_array(json, G, i+1);
+//Tree class
+class Tree {
+    constructor(value, rt = null, lt = null) {
+        this.val = value;
+        this.right = rt;
+        this.left = lt;
+    }
+}
+function drawNode(x, y, r, text, ctx) {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
+    ctx.font = "20px Arial";
+    ctx.strokeText(text, x - 10, y);
+    ctx.stroke();
+}
+
+function drawLine(fromx, fromy, tox, toy, ctx) {
+    ctx.beginPath();
+    ctx.moveTo(fromx, fromy);
+    ctx.lineTo(tox, toy);
+    ctx.closePath();
+    ctx.stroke();
+}
+function drawTree(rootTree, xstep, ystep, distance) {
+//draw node
+    if (rootTree !== null) {
+        drawNode(xstep, ystep, 20, rootTree.val, ctx);
+        //console.log(rootTree.val);
+    }
+//draw left tree
+    if (rootTree.left !== null) {
+        drawLine(xstep, ystep + 20, xstep - distance, ystep + 100 - 20, ctx);
+        drawTree(rootTree.left, xstep - distance, ystep + 100, distance / 2 + 20);
+    }
+// draw right tree
+    if (rootTree.right !== null) {
+        drawLine(xstep, ystep + 20, xstep + distance, ystep + 100 - 20, ctx);
+        drawTree(rootTree.right, xstep + distance, ystep + 100, distance / 2 + 20);
     }
 }
