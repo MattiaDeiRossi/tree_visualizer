@@ -24,7 +24,6 @@
       <change beforePath="$PROJECT_DIR$/tree_visualizer_client/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_client/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tree_visualizer_server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_server/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tree_visualizer_server/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_server/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tree_visualizer_server/src/script/jsnetworkx.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tree_visualizer_server/src/script/visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/tree_visualizer_server/src/script/visualizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,19 +60,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/matty/CLionProjects/tree_visualizer/tree_visualizer_client/CMakeLists.txt&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/matty/CLionProjects/tree_visualizer/tree_visualizer_client/CMakeLists.txt",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.deploy.options"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\matty\CLionProjects\tree_visualizer\tree_visualizer_server\src\script" />
@@ -84,11 +84,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="example" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tree_visualizer_client" TARGET_NAME="example" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tree_visualizer_client" RUN_TARGET_NAME="example">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -234,7 +229,10 @@
       <workItem from="1661601283156" duration="2863000" />
       <workItem from="1661866519628" duration="6289000" />
       <workItem from="1661874617929" duration="304000" />
-      <workItem from="1661969931916" duration="5095000" />
+      <workItem from="1661969931916" duration="5980000" />
+      <workItem from="1662058009914" duration="1670000" />
+      <workItem from="1662063742186" duration="3924000" />
+      <workItem from="1662128858594" duration="345000" />
     </task>
     <task id="LOCAL-00001" summary="PNode data type added">
       <created>1661874778893</created>

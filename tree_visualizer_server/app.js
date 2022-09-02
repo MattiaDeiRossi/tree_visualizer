@@ -14,6 +14,9 @@ router.get('/',(req,res) =>{
 router.get('/visualizeTree',(req,res) =>{
     res.json(graph);
 });
+router.get('/visualizeTraversals',(req,res) =>{
+    res.json(traversals);
+});
 
 router.post('/sendTree', (req,res) => {
     graph = req.body;

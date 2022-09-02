@@ -67,9 +67,18 @@ namespace tree_serializer
     }
 
     nlohmann::json serialize_traversals(PNode u){
-        nlohmann::json j1;
-        // TODO: serialize_traversals
-        return j1;
+        nlohmann::json j, j_pre, j_in, j_post, j_bfs;
+
+        preorder(u, j_pre);
+        inorder(u, j_in);
+        postorder(u, j_post);
+        BFS_iter(u, j_bfs);
+
+        j["preorder"] = j_pre;
+        j["inorder"] = j_in;
+        j["postorder"] = j_post;
+        j["bfs"] = j_bfs;
+        return j;
     }
     void show_traversals(PNode u){
         using json = nlohmann::json;

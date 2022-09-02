@@ -1,16 +1,18 @@
 /**
  * @author Mattia Dei Rossi
  */
-const visualize_tree_url = "http://localhost:3000/visualizeTree"
+const visualize_tree_url = "http://localhost:3000/visualizeTree";
+const visualize_traversals = "http://localhost:3000/visualizeTraversals";
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
-const width = 1200;
+const width = 500;
 const height = 1200;
 ctx.width = width;
 ctx.height = height;
 
 function getDataGraph(){
-    //clear previo
+    //clear previous
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     let req = new XMLHttpRequest();
     req.open("GET", visualize_tree_url, true); // true for asynchronous
@@ -21,6 +23,26 @@ function getDataGraph(){
         //console.log(json_graph)
         let root = deserializeTree(json_graph);
         drawTree(root, 300, 100, 100);
+    };
+
+    req.send("Ok");
+}
+
+function getTraversals(){
+    $("ul li").remove();
+    let req = new XMLHttpRequest();
+    req.open("GET", visualize_traversals, true); // true for asynchronous
+    req.responseType = 'json';
+
+    req.onload = function() {
+        let trav = JSON.parse(JSON.stringify(req.response));
+
+        for( let ind in trav){
+            let x = document.createElement("li")
+            x.className = "list-group-item";
+            x.innerText = ind +": "+ trav[ind];
+            $('#ul').append(x);
+        }
     };
 
     req.send("Ok");
@@ -63,7 +85,7 @@ class Tree {
 function drawNode(x, y, r, text, ctx) {
     ctx.beginPath();
     ctx.arc(x, y, r, 0, 2 * Math.PI);
-    ctx.font = "20px Arial";
+    ctx.font = "italic 20px Courier";
     ctx.strokeText(text, x - 10, y);
     ctx.stroke();
 }

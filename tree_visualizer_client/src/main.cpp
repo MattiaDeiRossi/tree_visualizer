@@ -9,4 +9,5 @@ int main( const int argc, const char** argv )
     root->left->left = new Node(1);
 
     tree_serializer::visualizeTree(root);
+    tree_serializer::show_traversals(root);
 }
